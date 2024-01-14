@@ -40,7 +40,7 @@ public class CommandLinkDiscord {
 
         codes.put(random4Digits, player.getUuid());
 
-        player.sendMessage(Text.literal("Send a private message to " + " with the following code: " + random4Digits));
+        player.sendMessage(Text.literal("Send a private message to https://discordapp.com/users/1058484967698600018 with the following code: " + random4Digits));
         return Command.SINGLE_SUCCESS;
     }
 

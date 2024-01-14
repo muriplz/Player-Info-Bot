@@ -19,8 +19,12 @@ public class DirectMessageListener extends ListenerAdapter {
         if (event.getAuthor().isBot()) return; // Ignore messages from other bots
 
         String message = event.getMessage().getContentRaw();
-
-        int code = Integer.parseInt(message);
+        int code;
+        try {
+            code = Integer.parseInt(message);
+        } catch (NumberFormatException e) {
+            return;
+        }
 
         if (!event.isFromType(ChannelType.PRIVATE)) return;
 

@@ -129,7 +129,7 @@ public final class Pipo implements DedicatedServerModInitializer {
     }
 
     public void scheduleTimers() {
-        long interval = Duration.ofMinutes(30).toMillis();
+        long interval = Duration.ofMinutes(5).toMillis();
         KRYEITOR_TIMER.schedule(new Autorole(JDA.getRoleById(Autorole.KRYEITOR)), interval, interval);
         COLLABORATOR_TIMER.schedule(new Autorole(JDA.getRoleById(Autorole.COLLABORATOR)), interval, interval);
     }

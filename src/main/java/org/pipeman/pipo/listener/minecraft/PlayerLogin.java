@@ -14,7 +14,7 @@ public class PlayerLogin implements ServerPlayConnectionEvents.Join {
         if (Utils.getOnlinePlayersSize() == 1) {
             Pipo.JDA.getPresence().setActivity(Activity.watching("1 player"));
         } else {
-            Pipo.JDA.getPresence().setActivity(Activity.watching(Utils.getOnlinePlayersSize() + " players"));
+            Pipo.JDA.getPresence().setActivity(Activity.watching((Utils.getOnlinePlayersSize() + 1) + " players"));
         }
     }
 }
