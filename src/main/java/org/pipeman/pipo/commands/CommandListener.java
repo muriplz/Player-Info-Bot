@@ -13,6 +13,7 @@ public class CommandListener extends ListenerAdapter {
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
         switch (event.getName()) {
+            case "tps" -> CommandTPS.handle(event);
             case "online" -> CommandOnline.handle(event);
             case "playerinfo" -> CommandPlayerinfo.handle(event);
             case "top-10" -> CommandTopN.handleTop10(event);
