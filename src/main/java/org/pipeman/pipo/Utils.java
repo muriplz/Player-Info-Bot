@@ -130,7 +130,7 @@ public class Utils {
     public static long getPlaytime(String name) {
 
         UUID id = Offlines.getUUIDbyName(name);
-        long playtime = OfflinesStats.getPlayerStat("play_time", id) / (60);
+        long playtime = OfflinesStats.getPlayerStat("play_time", id) / 20;
         return Math.max(0, playtime);
     }
 
